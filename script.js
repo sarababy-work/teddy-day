@@ -16,7 +16,8 @@ function createHearts() {
   const container = document.querySelector('.hearts');
   for (let i = 0; i < 30; i++) {
     const heart = document.createElement('div');
-    heart.innerText = '🤎';
+const teddies = ['🧸','💛'];
+heart.innerText = teddies[Math.floor(Math.random() * teddies.length)];
     heart.style.position = 'absolute';
     heart.style.fontSize = Math.random() * 30 + 20 + 'px';
     heart.style.left = Math.random() * window.innerWidth + 'px';
@@ -52,7 +53,7 @@ function createSparkles(parent) {
 // Falling confetti (chocolate + hearts + sparkles)
 // ================================
 function launchConfetti() {
-  const emojis = ['🍫', '🤎', '✨'];
+const emojis = ['🧸', '💛', '✨'];
 
   for (let i = 0; i < 50; i++) {
     const confetti = document.createElement('span');
