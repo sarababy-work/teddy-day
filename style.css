@@ -6,9 +6,11 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top, #f7f2e8, #efe3d0);
+  background: linear-gradient(135deg, #fff4cc, #ffe0b5);
+  color: #5a3e2b;
   font-family: 'Poppins', sans-serif;
 }
+
 
 /* Center content */
 body {
@@ -22,16 +24,17 @@ body {
    Container / chocolate card
    ========================== */
 .container {
-  background: linear-gradient(180deg, #fffaf3, #f3e7d3);
+  background: linear-gradient(180deg, #fffdf7, #f6e6cf);
   padding: 35px 30px;
   max-width: 360px;
   text-align: center;
-  box-shadow: 0 18px 40px rgba(75, 46, 43, 0.25);
+  box-shadow: 0 18px 40px rgba(140, 100, 70, 0.25);
   border-radius: 50% 40% 60% 45% / 45% 60% 40% 55%;
   animation: blob 8s infinite ease-in-out;
   position: relative;
   z-index: 1;
 }
+
 
 /* Blob animation */
 @keyframes blob {
@@ -47,15 +50,16 @@ body {
    Headings & text
    ========================== */
 h1 {
-  color: #4b2e2b; /* dark chocolate */
+  color: #7a4a2e;
 }
 
 p {
   font-size: 18px;
-  color: #6b3f2b; /* cocoa brown */
+  color: #6f4e37;
   line-height: 1.6;
-  text-shadow: 0 1px 2px rgba(107, 63, 43, 0.15);
+  text-shadow: 0 1px 2px rgba(111, 78, 55, 0.12);
 }
+
 
 /* ==========================
    Buttons
@@ -66,24 +70,26 @@ button,
   padding: 12px 22px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(135deg, #6b3f2b, #4b2e2b);
-  color: #fffaf3;
+  background: linear-gradient(135deg, #c69c6d, #a47148);
+  color: #fffdf7;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(75, 46, 43, 0.35);
+  box-shadow: 0 8px 18px rgba(164, 113, 72, 0.35);
   transition: all 0.3s ease;
 }
 
 button:hover,
 .reveal-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #8b5e3c, #6b3f2b);
+  background: linear-gradient(135deg, #d2aa7f, #b08968);
 }
 
 button:active,
 .reveal-btn:active {
+  background: #e3c097;
   transform: scale(0.97);
 }
+
 
 /* ==========================
    Hidden message
@@ -177,4 +183,7 @@ button:active,
     font-size: 15px;
     padding: 10px 18px;
   }
+}
+#secret {
+  color: #6a4b35;
 }
