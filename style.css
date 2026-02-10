@@ -1,0 +1,180 @@
+/* ==========================
+   General reset + background
+   ========================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #f7f2e8, #efe3d0);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Center content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ==========================
+   Container / chocolate card
+   ========================== */
+.container {
+  background: linear-gradient(180deg, #fffaf3, #f3e7d3);
+  padding: 35px 30px;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(75, 46, 43, 0.25);
+  border-radius: 50% 40% 60% 45% / 45% 60% 40% 55%;
+  animation: blob 8s infinite ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* Blob animation */
+@keyframes blob {
+  0%, 100% {
+    border-radius: 50% 40% 60% 45% / 45% 60% 40% 55%;
+  }
+  50% {
+    border-radius: 60% 45% 50% 55% / 55% 40% 60% 45%;
+  }
+}
+
+/* ==========================
+   Headings & text
+   ========================== */
+h1 {
+  color: #4b2e2b; /* dark chocolate */
+}
+
+p {
+  font-size: 18px;
+  color: #6b3f2b; /* cocoa brown */
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(107, 63, 43, 0.15);
+}
+
+/* ==========================
+   Buttons
+   ========================== */
+button,
+.reveal-btn {
+  margin-top: 20px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6b3f2b, #4b2e2b);
+  color: #fffaf3;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(75, 46, 43, 0.35);
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.reveal-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #8b5e3c, #6b3f2b);
+}
+
+button:active,
+.reveal-btn:active {
+  transform: scale(0.97);
+}
+
+/* ==========================
+   Hidden message
+   ========================== */
+.hidden {
+  visibility: hidden;
+}
+
+/* ==========================
+   Fade-in animation
+   ========================== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+.delay1 { animation-delay: 1s; }
+.delay2 { animation-delay: 2s; }
+.delay3 { animation-delay: 3s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ==========================
+   Typewriter effect
+   ========================== */
+.typewriter {
+  overflow: visible;
+  white-space: normal;
+  border-right: none;
+}
+
+.typewriter::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* ==========================
+   Floating hearts container
+   ========================== */
+/* Only floating elements should ignore pointer events */
+.hearts span, .hearts div {
+  pointer-events: none;
+}
+
+
+/* ==========================
+   Sparkle animation
+   ========================== */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+}
+
+/* ==========================
+   Falling confetti
+   ========================== */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ==========================
+   Responsive tweaks
+   ========================== */
+@media (max-width: 400px) {
+  .container {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
